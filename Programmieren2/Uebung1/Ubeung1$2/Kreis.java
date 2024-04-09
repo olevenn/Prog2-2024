@@ -12,12 +12,12 @@ public class Kreis extends GeoObject2D{
 
     @Override
     public double umfang() {
-        return 0;
+        return 2 * radius * Math.PI;
     }
 
     @Override
     public double flaeche() {
-        return 0;
+        return Math.PI * radius * radius;
     }
 
     @Override

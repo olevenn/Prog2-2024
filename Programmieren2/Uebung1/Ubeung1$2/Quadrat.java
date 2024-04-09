@@ -12,12 +12,12 @@ public class Quadrat extends GeoObject2D{
 
     @Override
     public double umfang() {
-        return 0;
+        return 4*kantenLaenge;
     }
 
     @Override
     public double flaeche() {
-        return 0;
+        return kantenLaenge*kantenLaenge;
     }
 
     @Override
