@@ -31,7 +31,7 @@ public class Quadrat extends GeoObject2D{
     }
 
     public Punkt2D eckeLU() {
-        return null;
+        return new Punkt2D();
     }
 
     public Punkt2D eckeRO() {

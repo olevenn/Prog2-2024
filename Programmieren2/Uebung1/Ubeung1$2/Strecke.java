@@ -1,9 +1,9 @@
 package Uebung1.Ubeung1$2;
 
-public class Strecke extends GeoObjekt{
+public class Strecke extends GeoObjekt implements Messbar{
     @Override
     public Punkt2D position() {
-        return null;
+        return new Punkt2D();
     }
 
     @Override
@@ -12,10 +12,15 @@ public class Strecke extends GeoObjekt{
     }
 
     public Punkt2D anfP() {
-        return null;
+        return new Punkt2D();
     }
 
     public Punkt2D endP() {
-        return null;
+        return new Punkt2D();
+    }
+
+    @Override
+    public double laenge() {
+        return 0;
     }
 }
