@@ -41,4 +41,14 @@ public class Quadrat extends GeoObject2D{
     public double kanatenI(){
         return 0.0;
     }
+
+    @Override
+    public void multiply(double d) {
+
+    }
+
+    @Override
+    public void resize() {
+
+    }
 }
