@@ -19,4 +19,8 @@ public class Punkt2D {
     public void setY(double y) {
         this.y = y;
     }
+
+    public double abstand(Punkt2D p) {
+        return Math.sqrt(Math.pow((p.x - this.x), 2.0) + Math.pow(p.y - this.y, 2.0));
+    }
 }

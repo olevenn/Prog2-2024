@@ -25,10 +25,11 @@ public class Vektor2D extends Punkt2D implements Addierbar, Messbar{
 
     @Override
     public Addierbar add(Addierbar a) {
-        Vektor2D b = (Vektor2D) a;
-        setX(this.x() + b.x());
-        setY(this.y() + b.y());
-        return (Addierbar) b;
+        Vektor2D v = (Vektor2D) a;
+        Vektor2D tmp = new Vektor2D();
+        tmp.setX(this.x() + v.x());
+        tmp.setY(this.y() + v.y());
+        return tmp;
     }
 
     @Override
