@@ -1,4 +1,4 @@
-package Uebung1.Ubeung1$1;
+package Uebung1.Ubeung1;
 
 public class Stud extends Person {
     private int matrikelnummer;

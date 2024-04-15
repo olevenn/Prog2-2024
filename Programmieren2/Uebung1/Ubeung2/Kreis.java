@@ -1,4 +1,4 @@
-package Uebung1.Ubeung1$2;
+package Uebung1.Ubeung2;
 
 public class Kreis extends GeoObject2D{
 
@@ -36,5 +36,15 @@ public class Kreis extends GeoObject2D{
 
     public double radius() {
         return 0.0;
+    }
+
+    @Override
+    public void multiply(double d) {
+
+    }
+
+    @Override
+    public void resize() {
+
     }
 }

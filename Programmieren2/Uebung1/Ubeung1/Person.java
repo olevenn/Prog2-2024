@@ -1,4 +1,4 @@
-package Uebung1.Ubeung1$1;
+package Uebung1.Ubeung1;
 
 public abstract class Person {
     private String name;

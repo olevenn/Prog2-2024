@@ -1,4 +1,4 @@
-package Uebung1.Ubeung1$2;
+package Uebung1.Ubeung2;
 
 public interface Skalierbar {
     public void multiply(double d);

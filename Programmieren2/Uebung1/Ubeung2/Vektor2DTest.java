@@ -1,4 +1,4 @@
-package Uebung1.Ubeung1$2;
+package Uebung1.Ubeung2;
 
 import org.junit.jupiter.api.Test;
 
