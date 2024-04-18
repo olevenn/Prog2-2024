@@ -28,7 +28,7 @@ public class Paar <E, Z>{
 
     @Override
     public String toString() {
-        return "SCHEI? BESCHREIBUNG DER AUFGABE";
+        return erstes.toString() + zweites.toString();
     }
     @Override
     public boolean equals(Object o) {
@@ -36,6 +36,6 @@ public class Paar <E, Z>{
             return false;
         Paar<E, Z> p = (Paar<E, Z>) o;
 
-        return this.getErstes() == ((Paar<?, ?>) o).getErstes() && this.getZweites() == ((Paar<?, ?>) o).getZweites();
+        return p.getErstes() == this.getErstes() && p.getZweites() == this.getZweites();
     }
 }
