@@ -37,7 +37,6 @@ public class TestKind {
         System.out.println(Kind.geschwister(marge, homer));
 
 
-
         //family Test
         Paar p1 = TestKind.family(bart);
         System.out.println(TestKind.dAlter(p1));
@@ -59,8 +58,12 @@ public class TestKind {
         Kind k3 = (Kind) p1.getZweites();
 
 
+        int k1Geb = k1.getGeburtsJahr();
+        int k2Geb = k2.getGeburtsJahr();
+        int k3Geb = k3.getGeburtsJahr();
 
-        durchschnittlichesAlter = (k1.getGeburtsJahr() + k2.getGeburtsJahr() + k3.getGeburtsJahr()) / 3;
+
+        durchschnittlichesAlter = ((k1Geb - k2Geb) + (k1Geb - k3Geb)) / 2;
         return durchschnittlichesAlter;
     }
 
