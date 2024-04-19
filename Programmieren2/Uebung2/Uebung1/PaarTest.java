@@ -42,7 +42,7 @@ class PaarTest {
 
     @Test
     void testToString() {
-        assertEquals("SCHEI? BESCHREIBUNG DER AUFGABE", p1.toString());
+        assertEquals("Tim2", p1.toString());
     }
 
     @Test

@@ -4,5 +4,5 @@
 - Fertig
 
 ## Aufgabe 2
-- Angefangen
+- 2/3
 
