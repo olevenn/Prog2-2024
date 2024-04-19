@@ -1,8 +1,8 @@
 # Prog2-2024
 
 ## Aufgabe 1 
-- Fertig
+- fertig
 
 ## Aufgabe 2
-- 2/3
+- fertig
 
