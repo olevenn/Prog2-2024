@@ -48,6 +48,17 @@ class DynArrayTest {
         assertEquals(1, dynArrayInteger.size());
         dynArrayInteger.delete(100);
         assertEquals(0, dynArrayInteger.size());
+
+
+        for (int i = 0; i < 5; i++) {
+            dynArrayInteger.add(i);
+        }
+
+        dynArrayInteger.add(3);
+        dynArrayInteger.delete(3);
+        dynArrayInteger.delete(3);
+
+        dynArrayInteger.delete(0);
     }
 
     @Test
