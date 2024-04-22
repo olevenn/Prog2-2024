@@ -6,3 +6,6 @@
 ## Aufgabe 2
 - fertig
 
+## Aufgabe 3
+- wird bearbeitet
+
