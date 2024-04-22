@@ -1,4 +1,6 @@
 /.idea/
 out
 .idea
-
+/out
+.gitignore
+/Programmieren2/Test
