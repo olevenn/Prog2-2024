@@ -7,5 +7,5 @@
 - fertig
 
 ## Aufgabe 3
-- wird bearbeitet
+- fertig
 
