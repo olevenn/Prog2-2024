@@ -1,7 +1,5 @@
 package Uebung2.Uebung3;
 
-import Uebung4.Uebung3.MengeEVL;
-
 public class MengeUtil {
 
     public static <T> void merge(Menge<T> m1, Menge<T> m2) throws Exception {

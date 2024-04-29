@@ -51,42 +51,43 @@ public class MengeEVL<T> implements Menge<T> {
 
     @Override
     public void delete(T v) {
-        ListenElem vorV = null;
-        ListenElem nachV = null;
+        try {
+            ListenElem vorV = null;
+            ListenElem nachV = null;
 
-        ListenElem gesucht = new ListenElem(v);
+            ListenElem gesucht = new ListenElem(v);
 
-        ListenElem tmp = first;
+            ListenElem tmp = first;
 
-        if(tmp.value == gesucht.value) {
-            first = tmp.next;
+            if(tmp.value == gesucht.value) {
+                first = tmp.next;
+                size--;
+            }
+
+            while (tmp.value != gesucht.value) {
+                tmp = tmp.next;
+                if (tmp.next == null)
+                    break;
+            }
+            if(tmp.next == null)
+                ;
+            else
+                nachV = tmp.next;
+
+            tmp = first;
+
+            while (tmp.next.value != gesucht.value) {
+                tmp = tmp.next;
+                if (tmp.next == null)
+                    return;
+            }
+            vorV = tmp;
+            vorV.next = nachV;
+
             size--;
-        }
-
-        while (tmp.value != gesucht.value) {
-            tmp = tmp.next;
-            if (tmp.next == null)
-                break;
-        }
-        if(tmp.next == null)
-            ;
-        else
-            nachV = tmp.next;
-
-        tmp = first;
-        if(tmp.next.value == null) {
+        }catch (NullPointerException e) {
 
         }
-
-        while (tmp.next.value != gesucht.value) {
-            tmp = tmp.next;
-            if (tmp.next == null)
-                return;
-        }
-        vorV = tmp;
-        vorV.next = nachV;
-
-        size--;
     }
 
     @Override

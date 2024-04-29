@@ -1,17 +1,17 @@
 package Uebung3.Uebung3;
 
-import Uebung4.Uebung3.MengeEVL;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MengeDynArrayTest {
-    static MengeEVL<String> mda;
+    static MengeDynArray<String> mda;
 
     @BeforeEach
     void init(){
-        mda = new MengeEVL<>();
+        mda = new MengeDynArray<>(1);
     }
 
     @Test

@@ -98,38 +98,42 @@ public class EVL<T> {
 
     @SuppressWarnings("unchecked")
     public void delete(T v) {
-        ListenElem vorV = null;
-        ListenElem nachV = null;
+        try {
+            ListenElem vorV = null;
+            ListenElem nachV = null;
 
-        ListenElem gesucht = new ListenElem(v);
+            ListenElem gesucht = new ListenElem(v);
 
-        ListenElem tmp = first;
+            ListenElem tmp = first;
 
-        if(tmp.value == gesucht.value) {
-            first = tmp.next;
+            if(tmp.value == gesucht.value) {
+                first = tmp.next;
+                size--;
+            }
+
+            while (tmp.value != gesucht.value) {
+                tmp = tmp.next;
+                if (tmp.next == null)
+                    break;
+            }
+            if(tmp.next == null)
+                ;
+            else
+                nachV = tmp.next;
+
+            tmp = first;
+            while (tmp.next.value != gesucht.value) {
+                tmp = tmp.next;
+                if (tmp.next == null)
+                    return;
+            }
+            vorV = tmp;
+            vorV.next = nachV;
+
             size--;
-        }
+        }catch (NullPointerException e) {
 
-        while (tmp.value != gesucht.value) {
-            tmp = tmp.next;
-            if (tmp.next == null)
-                break;
         }
-        if(tmp.next == null)
-            ;
-        else
-            nachV = tmp.next;
-
-        tmp = first;
-        while (tmp.next.value != gesucht.value) {
-            tmp = tmp.next;
-            if (tmp.next == null)
-                return;
-        }
-        vorV = tmp;
-        vorV.next = nachV;
-
-        size--;
     }
 
     public String toString() {
