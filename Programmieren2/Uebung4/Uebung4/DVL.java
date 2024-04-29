@@ -106,6 +106,8 @@ public class DVL<T> extends EVL<T> {
     public void delete(T v) {
         try {
             ListenElem zuLoeschen = new ListenElem(v);
+            ListenElem vorV = null;
+            ListenElem nachV = null;
 
             ListenElem tmp = first;
             while (tmp.value != zuLoeschen.value) {
@@ -113,18 +115,15 @@ public class DVL<T> extends EVL<T> {
                 if (tmp.next == null)
                     break;
             }
-            System.out.println(tmp.value);
+            vorV = tmp.prev;
+            nachV = tmp.next;
 
-            if(tmp.prev == null)
-                ;
-            else {
-                tmp.prev.next = tmp.next;
-                tmp.next.prev = tmp.prev;
-            }
+            System.out.println("VorV " + vorV.value);
+            System.out.println("NachV " + nachV.value);
 
             size--;
         } catch (NullPointerException e) {
-
+            System.out.println("FEHLER");
         }
     }
 
