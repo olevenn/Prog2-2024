@@ -122,6 +122,7 @@ public class DVL<T> extends EVL<T> {
             System.out.println("NachV " + nachV.value);
 
             size--;
+
         } catch (NullPointerException e) {
             System.out.println("FEHLER");
         }
