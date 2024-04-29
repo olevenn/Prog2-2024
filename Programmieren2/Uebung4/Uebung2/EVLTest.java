@@ -1,4 +1,4 @@
-package Uebung4;
+package Uebung4.Uebung2;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -108,5 +108,31 @@ class EVLTest {
         assertEquals(2, evl.size());
         assertEquals(1, evl.getFirst());
         assertEquals(3, evl.getLast());
+    }
+
+    @Test
+    void deleteFirst() {
+        evl.append(1);
+        evl.append(2);
+        evl.append(3);
+        assertEquals(3, evl.size());
+
+        evl.delete(1);
+
+        assertEquals(2, evl.size());
+        assertEquals(2, evl.getFirst());
+    }
+
+    @Test
+    void deleteLast() {
+        evl.append(1);
+        evl.append(2);
+        evl.append(3);
+        assertEquals(3, evl.size());
+
+        evl.delete(3);
+
+        assertEquals(2, evl.size());
+        assertEquals(1, evl.getFirst());
     }
 }

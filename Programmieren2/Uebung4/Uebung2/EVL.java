@@ -1,6 +1,5 @@
-package Uebung4;
+package Uebung4.Uebung2;
 
-import java.lang.annotation.ElementType;
 import java.util.*;
 
 public class EVL<T> {
@@ -99,19 +98,27 @@ public class EVL<T> {
 
     @SuppressWarnings("unchecked")
     public void delete(T v) {
-        ListenElem vorV;
-        ListenElem nachV;
+        ListenElem vorV = null;
+        ListenElem nachV = null;
 
         ListenElem gesucht = new ListenElem(v);
 
         ListenElem tmp = first;
 
+        if(tmp.value == gesucht.value) {
+            first = tmp.next;
+            size--;
+        }
+
         while (tmp.value != gesucht.value) {
             tmp = tmp.next;
             if (tmp.next == null)
-                return;
+                break;
         }
-        nachV = tmp.next;
+        if(tmp.next == null)
+            ;
+        else
+            nachV = tmp.next;
 
         tmp = first;
         while (tmp.next.value != gesucht.value) {

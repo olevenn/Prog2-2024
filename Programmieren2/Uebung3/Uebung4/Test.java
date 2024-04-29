@@ -1,5 +1,6 @@
 package Uebung3.Uebung4;
 
+
 public class Test {
     public static void main(String[] args) {
         Stud s1 = new Stud("Max", 2000);
@@ -50,5 +51,6 @@ public class Test {
 
         s1.belegt();
         krypto.ausgabe();
+
     }
 }

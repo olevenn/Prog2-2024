@@ -1,8 +1,10 @@
 package Uebung2.Uebung3;
 
+import Uebung4.Uebung3.MengeEVL;
+
 public class MengeUtil {
 
-    static <T> void merge(Menge<T> m1, Menge<T> m2) throws Exception {
+    public static <T> void merge(Menge<T> m1, Menge<T> m2) throws Exception {
         if ((m1.size() + m2.size()) > 100) {
             throw new Exception("Sind zusammen über 100 Elemente");
         }
@@ -13,4 +15,5 @@ public class MengeUtil {
             m2.delete(tmp);
         }
     }
+
 }
