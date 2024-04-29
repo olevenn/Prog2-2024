@@ -99,14 +99,14 @@ public class EVL<T> {
 
     @SuppressWarnings("unchecked")
     public void delete(T v) {
-        ListenElem vorV = null;
-        ListenElem nachV = null;
+        ListenElem vorV;
+        ListenElem nachV;
 
         ListenElem gesucht = new ListenElem(v);
 
         ListenElem tmp = first;
 
-        while (tmp != gesucht) {
+        while (tmp.value != gesucht.value) {
             tmp = tmp.next;
             if (tmp.next == null)
                 return;
@@ -114,14 +114,15 @@ public class EVL<T> {
         nachV = tmp.next;
 
         tmp = first;
-        while (tmp.next != gesucht) {
+        while (tmp.next.value != gesucht.value) {
             tmp = tmp.next;
             if (tmp.next == null)
                 return;
         }
         vorV = tmp;
-
         vorV.next = nachV;
+
+        size--;
     }
 
     public String toString() {

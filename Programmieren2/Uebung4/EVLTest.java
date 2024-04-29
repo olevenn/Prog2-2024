@@ -97,5 +97,16 @@ class EVLTest {
 
     @Test
     void delete() {
+        evl.append(1);
+        evl.append(2);
+        evl.append(3);
+
+        assertEquals(3, evl.size());
+
+        evl.delete(2);
+
+        assertEquals(2, evl.size());
+        assertEquals(1, evl.getFirst());
+        assertEquals(3, evl.getLast());
     }
 }
