@@ -26,14 +26,20 @@ public class EVL<T> {
         return size == 0;
     }
 
+    @SuppressWarnings("unchecked")
     public void append(T v) {
+        ListenElem neu = new ListenElem(v);
         ListenElem tmp = first;
 
-        while (tmp.next != null) {
-            tmp = tmp.next;
+        if(first == null) {
+            first = neu;
+        } else {
+            while (tmp.next != null) {
+                tmp = tmp.next;
+            }
+            tmp.next = neu;
         }
-
-        tmp.next = (ListenElem) v;
+        size++;
     }
 
     public void insert(T v) {
@@ -61,11 +67,61 @@ public class EVL<T> {
         return tmp.value;
     }
 
-    public void remove() {
+    public void removeFirst() {
         if (first == null)
             return;
         first = first.next;
         size--;
+    }
+
+    public void removeLast() {
+        if (first == null)
+            return;
+
+        //letzte Element finden
+        ListenElem letztesElem = first;
+
+        while (letztesElem.next != null) {
+            letztesElem = letztesElem.next;
+        }
+
+        //vorletzteElement finden
+
+        ListenElem tmp = first;
+
+        while (tmp.next != letztesElem) {
+            tmp = tmp.next;
+        }
+
+        tmp.next = null;
+        size--;
+    }
+
+    @SuppressWarnings("unchecked")
+    public void delete(T v) {
+        ListenElem vorV = null;
+        ListenElem nachV = null;
+
+        ListenElem gesucht = new ListenElem(v);
+
+        ListenElem tmp = first;
+
+        while (tmp != gesucht) {
+            tmp = tmp.next;
+            if (tmp.next == null)
+                return;
+        }
+        nachV = tmp.next;
+
+        tmp = first;
+        while (tmp.next != gesucht) {
+            tmp = tmp.next;
+            if (tmp.next == null)
+                return;
+        }
+        vorV = tmp;
+
+        vorV.next = nachV;
     }
 
     public String toString() {
