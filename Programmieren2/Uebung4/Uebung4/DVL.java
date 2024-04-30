@@ -2,8 +2,6 @@ package Uebung4.Uebung4;
 
 import Uebung4.Uebung2.EVL;
 
-import java.util.List;
-
 public class DVL<T> extends EVL<T> {
 
     ListenElem first;
@@ -97,7 +95,7 @@ public class DVL<T> extends EVL<T> {
 
         while (tmp.value != gesucht.value) {
             tmp = tmp.next;
-            if (tmp.next == null)
+            if (tmp.next == null && tmp.value != gesucht.value)
                 return false;
         }
         return true;
@@ -108,23 +106,25 @@ public class DVL<T> extends EVL<T> {
             ListenElem zuLoeschen = new ListenElem(v);
             ListenElem vorV = null;
             ListenElem nachV = null;
-
             ListenElem tmp = first;
-            while (tmp.value != zuLoeschen.value) {
-                tmp = tmp.next;
-                if (tmp.next == null)
-                    break;
+
+            if(first.value == zuLoeschen.value) {
+                first.next.prev = null;
+                first = first.next;
             }
+            size--;
+            while(tmp.value != zuLoeschen.value)
+                tmp = tmp.next;
+
             vorV = tmp.prev;
             nachV = tmp.next;
 
-            System.out.println("VorV " + vorV.value);
-            System.out.println("NachV " + nachV.value);
+            vorV.next = nachV;
+            nachV.prev = vorV;
 
-            size--;
 
         } catch (NullPointerException e) {
-            System.out.println("FEHLER");
+
         }
     }
 
