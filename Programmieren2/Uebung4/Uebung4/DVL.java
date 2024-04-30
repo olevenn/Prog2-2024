@@ -108,6 +108,9 @@ public class DVL<T> extends EVL<T> {
             ListenElem nachV = null;
             ListenElem tmp = first;
 
+            if(!contains(v))
+                return;
+
             if(first.value == zuLoeschen.value) {
                 first.next.prev = null;
                 first = first.next;
