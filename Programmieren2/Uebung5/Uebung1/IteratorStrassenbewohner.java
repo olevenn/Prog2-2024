@@ -14,11 +14,21 @@ public class IteratorStrassenbewohner<T> implements Iterator<T> {
         isEvenLength = array.length % 2 == 0;
     }
 
+    /**
+     * Wenn wir die geraden Indexe abarbeiten schauen wir, wann wir das obere Limit erreich haben,
+     * wenn wir die ungerade Indexe abarbeiten schauen wir, wann wir bei 0 sind
+     */
     @Override
     public boolean hasNext() {
         return (iterateEvenIndices ? index < array.length : index > 0);
     }
 
+    /**
+     * Wir gehen erst die gerade Indexe hoch und sobald wir das Ende erreich haben schauen wir ob wir ein gerade Array
+     * oder ungerade Arrays haben damit wir je nachdem den Index -1 oder -2 rechnen (damit das zurückgehen richtig funktioniert)
+     * Wenn wir nach unten gehen rechnen wir immer -2
+     * @return Immer das StrassenbewohnerElement
+     */
     @Override
     public T next() {
         if (!hasNext()) {
