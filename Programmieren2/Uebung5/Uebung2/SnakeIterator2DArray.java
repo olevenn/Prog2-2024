@@ -30,7 +30,7 @@ public class SnakeIterator2DArray <T> implements Iterator<T> {
         if(z % 2 == 0) {
             element = arr[z][s];
             s++;
-            try {
+            try { //Ist hier nur nötig wegen dem aller letzten Element was sonst faxen macht
                 if(arr[z].length-1 < s && hasNext()) {
                     z++;
                     s = arr[z].length-1;
