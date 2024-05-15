@@ -48,8 +48,8 @@ public class StapelArray <T> {
 
     @SuppressWarnings("unchecked")
     private void increase() {
-        T [] tmp = (T[]) new Object[arrsize*arrsize];
-        arrsize *= arrsize;
+        T [] tmp = (T[]) new Object[arrsize*2];
+        arrsize *= 2;
         for (int i = 0; i < size; i++) {
             tmp[i] = arr[i];
         }
