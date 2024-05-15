@@ -55,4 +55,31 @@ class StapelArrayTest {
         arr.pop();
         assertThrows(NoSuchElementException.class, () -> arr.top());
     }
+
+    @Test
+    void increase() {
+        arr = new StapelArray<>(2);
+        assertEquals(2, arr.maxsize());
+        arr.push(1);
+        arr.push(2);
+        arr.push(3);
+        assertEquals(3, arr.size());
+        assertEquals(4, arr.maxsize());
+    }
+
+    @Test
+    void decreaseTest() {
+        arr = new StapelArray<>(9);
+        for (int i = 0; i < 8; i++) {
+            arr.push(i);
+        }
+        assertEquals(8, arr.size());
+        assertEquals(9, arr.maxsize());
+        for (int i = 0; i < 6; i++) {
+            arr.pop();
+        }
+        assertEquals(2, arr.size());
+        assertEquals(4, arr.maxsize());
+
+    }
 }
