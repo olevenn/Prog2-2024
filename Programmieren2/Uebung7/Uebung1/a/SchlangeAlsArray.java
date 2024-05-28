@@ -1,4 +1,4 @@
-package Uebung7.Uebung1;
+package Uebung7.Uebung1.a;
 
 public class SchlangeAlsArray<T> {
     private T[] arr;
