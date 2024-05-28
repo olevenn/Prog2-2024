@@ -17,4 +17,8 @@
 - 5.3 noch nicht
 
 ## Aufgabe 6
-- 
+- 6.1 fertig
+- 6.2 & 6.4 noch nicht
+
+## Aufgabe 7
+- 7.1 fertig
