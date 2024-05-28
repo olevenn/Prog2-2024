@@ -14,7 +14,7 @@ public class StringChecker {
 
         String [] strings = s.split("");
 
-
+        return true;
     }
 
 }
