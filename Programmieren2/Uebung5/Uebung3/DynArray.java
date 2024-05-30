@@ -1,8 +1,9 @@
-package Uebung3.Uebung2;
+package Uebung5.Uebung3;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class DynArray<T> {
+public class DynArray<T> implements Iterable<T> {
     private Integer size;
     private Integer originalsize;
     private Integer maxGroesse;
@@ -115,5 +116,24 @@ public class DynArray<T> {
 
     public int arraySize() {
         return array.length;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new MyIterator();
+    }
+
+    private class MyIterator implements Iterator<T> {
+        private int index;
+
+        @Override
+        public boolean hasNext() {
+            return index < size();
+        }
+
+        @Override
+        public T next() {
+            return get(index++);
+        }
     }
 }

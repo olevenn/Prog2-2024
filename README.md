@@ -13,8 +13,7 @@
 - fertig
 
 ## Aufgabe 5
-- 5.1 & 5.2 fertig
-- 5.3 noch nicht
+- fertig
 
 ## Aufgabe 6
 - 6.1 fertig
