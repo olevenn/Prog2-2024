@@ -23,5 +23,4 @@
 - fertig
 
 ## Aufgabe 8
-- 8.1 fertig
-- 8.2 fertig
+- fertig
