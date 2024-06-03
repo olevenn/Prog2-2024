@@ -21,3 +21,6 @@
 
 ## Aufgabe 7
 - fertig
+
+## Aufgabe 8
+- 8.1 fertig
