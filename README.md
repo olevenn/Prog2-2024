@@ -25,3 +25,7 @@
 
 ## Aufgabe 8
 - fertig
+
+## Aufgabe 9
+- 9.1 fertig
+- 
