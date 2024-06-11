@@ -15,7 +15,6 @@ public class TestMain {
         ml.insert(s1);
         ml.insert(s4);
         ml.insert(s3);
-
         Stud []test = StudUtil.sort(ml);
 
         for (Stud stud : test) {

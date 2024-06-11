@@ -8,6 +8,8 @@ import Uebung9.Uebung1.Stud;
  * im Array 1 Schritt weiter, bis eine leere Stelle kommt.
  * Bei allen anderen Fällen(tmp kleiner oder gleich) schieben wir alle vorhanden Werte im Array 1 nach hinten und fügen
  * tmp ein
+ *
+ * Duplikate gehen nicht weil MengeLimited die erst garnicht hinzufügt in die Liste
  */
 
 
@@ -16,7 +18,7 @@ public class StudUtil {
         Stud[] arr = new Stud[m.size()];
         int size = 0;
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < arr.length; i++) {
             Stud tmp = m.get();
             m.delete(tmp);
             if (size == 0) {
