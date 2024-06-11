@@ -1,4 +1,4 @@
-package Uebunug9.Uebung1;
+package Uebung9.Uebung1;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

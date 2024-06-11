@@ -1,4 +1,4 @@
-package Uebunug9.Uebung1;
+package Uebung9.Uebung1;
 
 public class Stud implements Comparable<Stud>{
     private static int nextNr = 100;
