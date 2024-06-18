@@ -4,14 +4,10 @@ public class MengeDynArray<T> implements Menge<T> {
 
     private int size;
     private T[] array;
-    private int maxGroesse;
-    private int originalsize;
 
     @SuppressWarnings("unchecked")
     public MengeDynArray(int size) {
         array = (T[]) new Object[size];
-        this.originalsize = size;
-        this.maxGroesse = size;
         this.size = 0;
     }
 
@@ -28,6 +24,10 @@ public class MengeDynArray<T> implements Menge<T> {
     @Override
     public T get() {
         return array[0];
+    }
+
+    public void remove() {
+        delete(array[0]);
     }
 
     @Override
@@ -73,16 +73,12 @@ public class MengeDynArray<T> implements Menge<T> {
 
     @SuppressWarnings("unchecked")
     public void decrease() {
-        if (size <= maxGroesse / 4)
-            if (size < originalsize)
-                ;
-            else {
-                maxGroesse = maxGroesse / 2;
-                T[] neu = (T[]) new Object[maxGroesse];
-                for (int i = 0; i < size; i++)
-                    neu[i] = array[i];
-                array = neu;
-            }
+        if (size <= array.length / 4) {
+            T[] neu = (T[]) new Object[array.length / 2];
+            for (int i = 0; i < size; i++)
+                neu[i] = array[i];
+            array = neu;
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -91,6 +87,5 @@ public class MengeDynArray<T> implements Menge<T> {
         for (int i = 0; i < size; i++)
             neu[i] = array[i];
         array = neu;
-        maxGroesse *= 2;
     }
 }

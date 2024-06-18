@@ -1,15 +1,16 @@
 package Uebung10;
 
 import Uebung2.Uebung3.Menge;
+import Uebung3.Uebung3.MengeDynArray;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class Bibliothek <T> implements Iterable<T>{
-    Menge<T> menge;
+    MengeDynArray<T> menge;
 
     public Bibliothek() {
-        menge = null;
+        menge = new MengeDynArray<>(2);
     }
 
     public void addBook(T buch) {
