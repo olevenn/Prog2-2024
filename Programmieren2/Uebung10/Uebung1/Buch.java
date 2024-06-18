@@ -1,4 +1,4 @@
-package Uebung10;
+package Uebung10.Uebung1;
 
 public class Buch implements Comparable<Buch>{
     String titel;

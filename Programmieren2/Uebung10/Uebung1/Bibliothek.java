@@ -1,4 +1,4 @@
-package Uebung10;
+package Uebung10.Uebung1;
 
 import Uebung3.Uebung3.MengeDynArray;
 
