@@ -19,6 +19,6 @@ public class Buch implements Comparable<Buch>{
         if(this.titel.equals(o.titel)) {
             return this.autor.compareTo(o.autor);
         }
-        return -1;
+        return this.titel.compareTo(o.titel);
     }
 }

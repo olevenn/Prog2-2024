@@ -14,8 +14,6 @@ public class Autor implements Comparable<Autor> {
 
     @Override
     public int compareTo(Autor o) {
-        if(this.name.equals(o.name))
-            return 0;
-        return -1;
+        return this.name.compareTo(o.name);
     }
 }

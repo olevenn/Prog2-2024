@@ -5,6 +5,7 @@ import Uebung3.Uebung3.MengeDynArray;
 import Uebung8.Folge;
 import Uebung8.Uebung1.FolgeAlsDynArray;
 
+
 import java.util.Arrays;
 
 public class MainTest {
@@ -30,10 +31,10 @@ public class MainTest {
         Bibliothek<Buch> bibliothek = new Bibliothek<>();
 
         //Bücher in die Bibliothek hinzufügen
-        bibliothek.addBook(b1);
-        bibliothek.addBook(b2);
         bibliothek.addBook(b3);
+        bibliothek.addBook(b1);
         bibliothek.addBook(b4);
+        bibliothek.addBook(b2);
 
         //Test Methode 1
         //MainTest.methode1(bibliothek);
@@ -43,13 +44,13 @@ public class MainTest {
         buchMengeDynArray.insert(b5);
         buchMengeDynArray.insert(b6);
 
-        //ka wie ich das machen kann Problem: zugriff und lesen und erben mit Generics
-        MainTest.methode2(bibliothek, buchMengeDynArray);
-
+        //MainTest.methode2(bibliothek, buchMengeDynArray);
+        //MainTest.methode1(bibliothek);
 
 
         //Test Methode 3
         Folge<Buch> buchFolge = MainTest.methode3(bibliothek);
+        System.out.println(buchFolge);
 
     }
 
@@ -59,8 +60,9 @@ public class MainTest {
         }
     }
 
+
     public static void methode2(Bibliothek<Buch> bibliothek, Menge<Buch> buchMenge) {
-        int size = buchMenge.size(); //ansonsten funktioniert die for schleife nicht
+        int size = buchMenge.size();
         for (int i = 0; i < size; i++) {
             Buch tmp = buchMenge.get();
             bibliothek.addBook(tmp);
@@ -69,22 +71,16 @@ public class MainTest {
     }
 
     public static Folge<Buch> methode3(Bibliothek<Buch> b) {
-        //sehr fragwürdig, ob diese Methode klappt
-
         Folge<Buch> buchFolge = new FolgeAlsDynArray<>(b.menge.size());
-        MengeDynArray<Buch> mengeDynArray = new MengeDynArray<>(b.menge.size());
 
-        for (Buch tmp :
-                b) {
-            b.menge.delete(tmp);
-            mengeDynArray.insert(tmp);
+        Buch[] arr = new Buch[b.menge.size()];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = b.menge.get();
+            b.menge.delete(arr[i]);
         }
-        Buch[] tmp = BuchUtil.sort(mengeDynArray);
 
-        for (Buch tmp1 :
-                tmp) {
-            buchFolge.addLast(tmp1);
-        }
+        Arrays.sort(arr);
+
         return buchFolge;
     }
 
