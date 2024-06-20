@@ -50,7 +50,9 @@ public class MainTest {
 
         //Test Methode 3
         Folge<Buch> buchFolge = MainTest.methode3(bibliothek);
-        System.out.println(buchFolge);
+        for (Buch tmp : buchFolge) {
+            System.out.println(tmp);
+        }
 
     }
 
@@ -72,7 +74,6 @@ public class MainTest {
 
     public static Folge<Buch> methode3(Bibliothek<Buch> b) {
         Folge<Buch> buchFolge = new FolgeAlsDynArray<>(b.menge.size());
-
         Buch[] arr = new Buch[b.menge.size()];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = b.menge.get();
@@ -80,6 +81,10 @@ public class MainTest {
         }
 
         Arrays.sort(arr);
+
+        for (Buch tmp : arr) {
+            buchFolge.addLast(tmp);
+        }
 
         return buchFolge;
     }

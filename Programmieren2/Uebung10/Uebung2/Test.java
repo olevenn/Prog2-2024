@@ -1,7 +1,6 @@
 package Uebung10.Uebung2;
 
 import Uebung1.Ubeung1.Boxer;
-import Uebung1.Ubeung1.Person;
 import Uebung1.Ubeung1.Stud;
 import Uebung6.Uebung2.Paar;
 import Uebung8.Folge;
