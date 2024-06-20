@@ -37,33 +37,32 @@ public class MainTest {
         bibliothek.addBook(b2);
 
         //Test Methode 1
-        //MainTest.methode1(bibliothek);
+        //MainTest.ausgabe(bibliothek);
 
         //Test Methode 2
         Menge<Buch> buchMengeDynArray = new MengeDynArray<>(2);
         buchMengeDynArray.insert(b5);
         buchMengeDynArray.insert(b6);
 
-        //MainTest.methode2(bibliothek, buchMengeDynArray);
-        //MainTest.methode1(bibliothek);
+        //MainTest.zusammenFuegen(bibliothek, buchMengeDynArray);
+        //MainTest.ausgabe(bibliothek);
 
 
         //Test Methode 3
-        Folge<Buch> buchFolge = MainTest.methode3(bibliothek);
+        Folge<Buch> buchFolge = MainTest.sortieren(bibliothek);
         for (Buch tmp : buchFolge) {
             System.out.println(tmp);
         }
 
     }
 
-    public static void methode1(Bibliothek<? extends Buch> bibliothek) {
+    public static void ausgabe(Bibliothek<?> bibliothek) {
         for (Buch tmp : bibliothek) {
             System.out.println(tmp);
         }
     }
 
-
-    public static void methode2(Bibliothek<Buch> bibliothek, Menge<Buch> buchMenge) {
+    public static void zusammenFuegen(Bibliothek<? super Buch> bibliothek, Menge<Buch> buchMenge) {
         int size = buchMenge.size();
         for (int i = 0; i < size; i++) {
             Buch tmp = buchMenge.get();
@@ -72,7 +71,7 @@ public class MainTest {
         }
     }
 
-    public static Folge<Buch> methode3(Bibliothek<Buch> b) {
+    public static Folge<Buch> sortieren(Bibliothek<? super Buch> b) {
         Folge<Buch> buchFolge = new FolgeAlsDynArray<>(b.menge.size());
         Buch[] arr = new Buch[b.menge.size()];
         for (int i = 0; i < arr.length; i++) {
