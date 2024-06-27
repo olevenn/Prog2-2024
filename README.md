@@ -31,3 +31,6 @@
 
 ## Aufgabe 10
 - fertig
+
+## Aufgabe 11
+- Aufgabe 11.1 fertig
