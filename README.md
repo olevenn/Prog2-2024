@@ -33,4 +33,5 @@
 - fertig
 
 ## Aufgabe 11
-- Aufgabe 11.1 fertig
+- 11.1 fertig
+- 11.3 nicht fertig
