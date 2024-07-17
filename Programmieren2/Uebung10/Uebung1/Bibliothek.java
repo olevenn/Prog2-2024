@@ -17,6 +17,7 @@ public class Bibliothek<T extends Buch> implements Iterable<T> {
     }
 
     @Override
+
     public Iterator<T> iterator() {
         return new MyIterator();
     }
